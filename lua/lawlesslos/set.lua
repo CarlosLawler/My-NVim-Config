@@ -57,3 +57,14 @@ vim.opt.cursorcolumn = false
 
 -- Make sure user site directory is on runtimepath so Treesitter queries/parsers are found
 vim.opt.runtimepath:append(vim.fn.stdpath("data") .. "/site")
+
+-- Better split separators
+vim.opt.fillchars = {
+  vert = "│",
+  horiz = "═",
+  stl = "─",
+  stlnc = "─",
+}
+
+-- clipboard default yank register (use "_d to leave clipboard untouched)
+vim.opt.clipboard = "unnamedplus"
