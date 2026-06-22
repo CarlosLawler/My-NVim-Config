@@ -330,4 +330,29 @@ require("lazy").setup({
 			})
 		end,
 	},
+        -- Git diff viewer
+    {
+        "sindrets/diffview.nvim",
+        dependencies = {
+            "nvim-lua/plenary.nvim",
+            "nvim-tree/nvim-web-devicons",
+        },
+        keys = {
+            {
+                "<leader>gd",
+                "<cmd>DiffviewOpen<cr>",
+                desc = "Open Git diff view",
+            },
+            {
+                "<leader>gD",
+                "<cmd>DiffviewClose<cr>",
+                desc = "Close Git diff view",
+            },
+            {
+                "<leader>gh",
+                "<cmd>DiffviewFileHistory %<cr>",
+                desc = "Current file history",
+            },
+        },
+    },
 })
